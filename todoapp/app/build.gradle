@@ -30,6 +30,7 @@ android {
     buildTypes {
         debug {
             minifyEnabled true
+            testCoverageEnabled true
             useProguard true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
@@ -104,6 +105,7 @@ dependencies {
     testImplementation "junit:junit:$junitVersion"
     testImplementation "org.mockito:mockito-core:$mockitoVersion"
     testImplementation "org.hamcrest:hamcrest-all:$hamcrestVersion"
+    testImplementation "org.robolectric:robolectric:$robolectricVersion"
     testImplementation "android.arch.core:core-testing:$archTestingVersion"
 
     // Dependencies for Android unit tests
@@ -114,6 +116,7 @@ dependencies {
     // Android Testing Support Library - Instrumented testing
     androidTestImplementation "androidx.test:runner:$androidXTestVersion"
     androidTestImplementation "androidx.test:rules:$androidXTestVersion"
+    androidTestImplementation "androidx.test.ext:junit:$runnerExtVersion"
     androidTestImplementation "androidx.room:room-testing:$roomVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
     androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
