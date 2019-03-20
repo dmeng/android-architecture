@@ -3,6 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 android {
+    testOptions.unitTests.includeAndroidResources = true
     compileSdkVersion rootProject.compileSdkVersion
 
     defaultConfig {
@@ -107,6 +108,8 @@ dependencies {
     testImplementation "org.hamcrest:hamcrest-all:$hamcrestVersion"
     testImplementation "org.robolectric:robolectric:$robolectricVersion"
     testImplementation "android.arch.core:core-testing:$archTestingVersion"
+    testImplementation 'androidx.fragment:fragment-testing:1.1.0-alpha02'
+    testImplementation "androidx.test.ext:junit:$runnerExtVersion"
 
     // Dependencies for Android unit tests
     androidTestImplementation "junit:junit:$junitVersion"
