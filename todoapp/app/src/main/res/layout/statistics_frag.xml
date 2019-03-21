@@ -55,6 +55,7 @@
                 android:visibility="@{stats.empty ? View.VISIBLE : View.GONE}" />
 
             <TextView
+                android:id="@+id/stats_active_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@{@string/statistics_active_tasks(stats.numberOfActiveTasks)}"
@@ -62,6 +63,7 @@
                 android:visibility="@{stats.empty ? View.GONE : View.VISIBLE}" />
 
             <TextView
+                android:id="@+id/stats_completed_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@{@string/statistics_completed_tasks(stats.numberOfCompletedTasks)}"
