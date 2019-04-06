@@ -3,6 +3,7 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.1'
@@ -37,7 +38,7 @@ ext {
     androidXTestVersion = '1.1.1'
     androidXAnnotations = '1.0.1'
     androidXLegacySupport = '1.0.0'
-    robolectricVersion = '4.2'
+    robolectricVersion = '4.3-alpha-2'
     materialVersion = '1.0.0'
     cardVersion = '1.0.0'
     recyclerViewVersion = '1.0.0'

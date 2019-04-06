@@ -110,6 +110,9 @@ dependencies {
     testImplementation "android.arch.core:core-testing:$archTestingVersion"
     testImplementation 'androidx.fragment:fragment-testing:1.1.0-alpha02'
     testImplementation "androidx.test.ext:junit:$runnerExtVersion"
+    testImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    testImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
+    testImplementation "androidx.test.espresso:espresso-intents:$espressoVersion"
 
     // Dependencies for Android unit tests
     androidTestImplementation "junit:junit:$junitVersion"

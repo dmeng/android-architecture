@@ -42,6 +42,7 @@ abstract class ToDoDatabase : RoomDatabase() {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.applicationContext,
                             ToDoDatabase::class.java, "Tasks.db")
+                            .fallbackToDestructiveMigration()
                             .build()
                 }
                 return INSTANCE!!
